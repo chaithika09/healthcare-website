@@ -1,0 +1,18 @@
+{
+  "name": "mediq-selenium-e2e",
+  "version": "1.0.0",
+  "description": "MedIQ+ Healthcare Portal — Selenium E2E Tests with Excel Reports",
+  "private": true,
+  "scripts": {
+    "test":           "node tests/e2e-runner.js",
+    "test:report":    "node tests/e2e-runner.js && node reports/excel-report.js",
+    "report:excel":   "node reports/excel-report.js",
+    "report:html":    "node reports/html-report.js"
+  },
+  "dependencies": {
+    "selenium-webdriver": "4.16.0",
+    "chromedriver":       "latest",
+    "xlsx":               "0.18.5",
+    "fs-extra":           "11.2.0"
+  }
+}
