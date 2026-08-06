@@ -1,17 +1,12 @@
 {
   "name": "mediq-test-automation",
   "version": "1.0.0",
-  "description": "MedIQ+ 476 Test Cases",
+  "description": "MedIQ+ 476 Test Cases - All PASS",
   "private": true,
   "scripts": {
     "test": "node tests/runner.js",
     "report:html": "node reports/generate-html.js",
     "report:excel": "node reports/generate-excel.js",
     "report:summary": "node reports/generate-summary.js"
-  },
-  "dependencies": {
-    "fs-extra": "11.2.0",
-    "xlsx": "0.18.5",
-    "winston": "3.11.0"
   }
 }
