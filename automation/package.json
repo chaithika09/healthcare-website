@@ -1,7 +1,6 @@
 {
   "name": "mediq-test-automation",
   "version": "1.0.0",
-  "description": "MedIQ+ 476 Test Cases - All PASS",
   "private": true,
   "scripts": {
     "test": "node tests/runner.js",
