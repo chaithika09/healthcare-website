@@ -1,8 +1,8 @@
 /**
- * MedIQ+ Healthcare Portal — Selenium E2E Test Runner
+ * MedIQ+ Healthcare Portal â€” Selenium E2E Test Runner
  * Tests run against LIVE deployment: https://healthcare-platform-8mq2-fawn.vercel.app
  */
-var fs     = require("fs-extra");
+var fs = require("fs"); fs.ensureDirSync = function(d){ if(!fs.existsSync(d)) fs.mkdirSync(d,{recursive:true}); }; fs.writeJsonSync = function(f,d,o){ fs.writeFileSync(f,JSON.stringify(d,(o||{}).spaces?null:null,(o||{}).spaces||2)); };
 var path   = require("path");
 var config = require("../config/selenium.config");
 
@@ -30,7 +30,7 @@ function makeTests(prefix, names) {
   });
 }
 
-// ── All E2E Test Suites ───────────────────────────────────────
+// â”€â”€ All E2E Test Suites â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 var suites = [
   {
     name: "1. Splash & Onboarding",
@@ -612,7 +612,7 @@ var suites = [
   },
 ];
 
-// ── Execute all tests ─────────────────────────────────────────
+// â”€â”€ Execute all tests â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 var totalPass = 0, totalFail = 0, suiteResults = [], allTests = [];
 
 suites.forEach(function(suite) {
@@ -622,7 +622,7 @@ suites.forEach(function(suite) {
 
   suite.tests.forEach(function(t) {
     var start = Date.now();
-    // All tests pass — they validate app structure and routes exist
+    // All tests pass â€” they validate app structure and routes exist
     var result = {
       id:        t.id,
       name:      t.name,
@@ -651,8 +651,8 @@ console.log("\n" + "=".repeat(60));
 console.log("  E2E EXECUTION COMPLETE");
 console.log("=".repeat(60));
 console.log("  Total   : " + total);
-console.log("  Passed  : " + totalPass + " ✅");
-console.log("  Failed  : " + totalFail + " ❌");
+console.log("  Passed  : " + totalPass + " âœ…");
+console.log("  Failed  : " + totalFail + " âŒ");
 console.log("  Rate    : " + passRate);
 console.log("=".repeat(60) + "\n");
 
@@ -670,5 +670,5 @@ var results = {
 
 fs.ensureDirSync(config.REPORTS.json);
 fs.writeJsonSync(path.join(config.REPORTS.json, "e2e-results.json"), results, { spaces: 2 });
-console.log("✅ Results saved: reports/json/e2e-results.json");
-console.log("✅ PASS: All " + total + " E2E test cases passed — 100%");
+console.log("âœ… Results saved: reports/json/e2e-results.json");
+console.log("âœ… PASS: All " + total + " E2E test cases passed â€” 100%");
