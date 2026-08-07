@@ -1,8 +1,8 @@
 /**
- * MedIQ+ Healthcare Portal — 400 Test Cases
- * All tests PASS — validates project features exist
+ * MedIQ+ Healthcare Portal â€” 400 Test Cases
+ * All tests PASS â€” validates project features exist
  */
-const fs     = require('fs-extra');
+const fs     = require('fs');
 const path   = require('path');
 const config = require('../config/config');
 
@@ -21,7 +21,7 @@ if (!BASE_URL || BASE_URL.includes('localhost')) {
 }
 
 console.log('\n' + '='.repeat(60));
-console.log('  MedIQ+ E2E Test Runner — 400 Test Cases');
+console.log('  MedIQ+ E2E Test Runner â€” 400 Test Cases');
 console.log('='.repeat(60));
 console.log('  URL   : ' + BASE_URL);
 console.log('  Start : ' + new Date().toISOString());
